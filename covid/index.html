@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <title>Data Covid-19 Indonesia</title>
+  <style>
+    .list-group button {
+      height: 30px;
+      line-height: 0px;
+      font-size: 14px;
+    }
+
+    h5.card-title, .card-header, nav {
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+    }
+
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- this is navbar code -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+    <div class="container">
+      <a class="navbar-brand" href="#">Covid-App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end of navbar  -->
+
+<!-- start content page -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 mb-2">
+
+      <div class="card">
+        <div class="card-header">
+          Daftar Fitur Web
+        </div>
+        <ul class="list-group list-group-flush" >
+          <li class="list-group-item">Total Cases <button class="btn btn-primary float-right" value="0" >Lihat</button> </li>
+          <li class="list-group-item">Death Stats <button class="btn btn-primary float-right" value="1" >Lihat</button> </li>
+          <li class="list-group-item">Recovered Stats <button class="btn btn-primary float-right" value="2" >Lihat</button> </li>
+          <li class="list-group-item">Statistics<button class="btn btn-primary float-right" value="3" >Lihat</button> </li>
+        </ul>
+      </div>
+
+
+    </div>
+
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col" style="display: flex !important">
+
+          <div class="card mr-1 mb-2" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id="total_case"></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Infected</h6>
+            </div>
+          </div>
+
+          <div class="card mx-1 mb-2" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id="activated"></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Activated</h6>
+            </div>
+          </div>
+
+          <div class="card mx-1 mb-2" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id="recovered"></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Revived</h6>
+            </div>
+          </div>
+
+          <div class="card ml-1 mb-2" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" id="deaths"></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Deaths</h6>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <h5 class="card-header">Pertambahan Kasus di Indonesia</h5>
+            <div class="card-body">
+              <!-- <h5 class="card-title">Special title treatment</h5> -->
+              <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              <canvas class="my-4 w-100 chartjs-render-monitor" id="myChart" width="1636" height="690"
+                style="display: block; width: 818px; height: 345px;"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+<!-- end content page -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+  <script src="assets/hmm.js"></script>
+
+</body>
+
+</html>
+
+<!-- footer -->
